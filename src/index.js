@@ -40,3 +40,26 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+//h1
+const domHeader = document.querySelector("h1");
+domHeader.textContent = siteContent.cta.h1;
+document.querySelector(".cta-text").prepend(domHeader);
+
+//button
+document.querySelector("button").textContent = siteContent.cta.button;
+
+//cta image
+const ctaImage = document.querySelector("#cta-img");
+ctaImage.src =siteContent["images"]["cta-img"];
+console.log(ctaImage);
+
+//top content
+const featuresHeader = document.querySelector("h4").setAttribute("className","features-h4");
+const featuresText = document.querySelector("p");
+// featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+featuresText.textContent = siteContent["main-content"]["features-content"];
+// document.querySelector(".top-content").appendChild(featuresHeader);
+document.querySelector(".top-content").appendChild(featuresText);
+console.log(featuresHeader);
+
+const aboutHeader = document.querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
